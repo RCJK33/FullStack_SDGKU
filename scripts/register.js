@@ -1,6 +1,6 @@
 //object literal: name, address{}, tel, hours{}, pet[]
 let array = [];
-let divPets = document.querySelector("#pets")
+
 let input1 = document.getElementById("name");
 let input2 = document.getElementById("age");
 let input3 = document.getElementById("gender");
@@ -13,10 +13,7 @@ function getForm() {
     console.log("Service: " + input4.value);
     let newPet = new Pet(input1.value,input2.value,input2.value,"DogX",input4.value);
     array.push(newPet);
-    
-    divPets.innerHTML += `
-            <p>${newPet.name}</p>
-        `;
+    displayPetCards()
     clearInputs();
 }
 
@@ -35,26 +32,25 @@ function clearInputs() {
     input4.value = ""
 }
 
+const alertDiv = document.getElementById("alertDiv");
+function alertAdd() {
+    alertDiv.innerHTML = `<div class="alert">
+    Congratulations, a pet was added successfully!
+    </div>`;
+}
 
 // Para evita que JS ejecute el codigo debemos crear una fuincion que
 // se ejecute cuando el documento HTML termine de cargar
 
-function displayPetNames() {
-    for (let i = 0; i < array.length; i++) {
-        divPets.innerHTML += `
-            <p>${array[i].name}</p>
-        `;
-    }
-}
 
 
 function init() {
 
-    let pet1 = new Pet("Ody",3,"male","DogX","Grooming");
-    let pet2 = new Pet("Zeus",5,"male","DogY","Grooming");
-    let pet3 = new Pet("Coraje",1,"male","DogX","Grooming");
+    let pet1 = new Pet("Ody",3,"male","DogX","grooming");
+    let pet3 = new Pet("Coraje",1,"male","DogX","nail");
+    let pet2 = new Pet("Zeus",5,"male","DogY","nail");
     array.push(pet1,pet2,pet3);
-    displayPetNames();
+    displayPetCards();
 }
 
 window.onload = init;
