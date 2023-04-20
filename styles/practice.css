@@ -1,0 +1,9 @@
+body{
+    font-family: Arial;
+}
+
+.student{
+    border: 1px solid black;
+    width: 200px;
+    background-color: #2765c4;
+}
