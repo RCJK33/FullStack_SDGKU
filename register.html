@@ -43,6 +43,7 @@
                     <option value="grooming">grooming</option>
                     <option value="nail">nail triming</option>
                     <option value="vaccine">Vaccines</option>
+                    <option value="shower">Shower</option>
                 </select>
                 <br><br>
                 <button type="button" onclick="getForm();">Entry</button>
@@ -50,6 +51,21 @@
         </div>
 
         <div id="petCount" class="petCount">
+        </div>
+
+        <div class="table-content">
+            <table class="table" id="table">
+                <thead>
+                <tr>
+                    <th>No.</th>
+                    <th>Name</th>
+                    <th>age</th>
+                    <th>Gender</th>
+                    <th>Service</th>
+                </tr></thead>
+                <tbody id="tableBody"></tbody>
+                
+            </table>
         </div>
 
         <div id="pets">

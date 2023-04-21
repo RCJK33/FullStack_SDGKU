@@ -1,6 +1,8 @@
 function displayPetCards() {
     let card = "";
+    let rows ="";
     const div = document.getElementById('pets')
+    const divTR = document.getElementById('tableBody')
     // Travel the pets array
     for (let i = 0; i < array.length; i++) {
         // Create the template
@@ -20,9 +22,21 @@ function displayPetCards() {
             <p>${array[i].gender}</p>
             <p>${array[i].service}</p>
         </div>`;
+        rows += `
+            <tr style="background-color:${color}">
+                
+                <td class="table-rows">${i+1}</td>
+                <td class="table-rows">${array[i].name}</td>
+                <td class="table-rows">${array[i].age}</td>
+                <td class="table-rows">${array[i].gender}</td>
+                <td class="table-rows">${array[i].service}</td>
+                    
+            </tr>
+        `;
     }
     // Insert the template into the html
     div.innerHTML = card;
+    divTR.innerHTML = rows;
     updateCountPets();
 }
 
