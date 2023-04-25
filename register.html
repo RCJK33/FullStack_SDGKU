@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/myStyles.css">
+    <link rel="stylesheet" href="styles/tableStyles.css">
     <title>The Fashon Pet</title>
 </head>
 <body>
@@ -54,15 +55,16 @@
         </div>
 
         <div class="table-content">
-            <table class="table" id="table">
-                <thead>
-                <tr>
-                    <th>No.</th>
-                    <th>Name</th>
-                    <th>age</th>
-                    <th>Gender</th>
-                    <th>Service</th>
-                </tr></thead>
+            <table class="tab_pane" id="table">
+                <thead class="theader">
+                    <tr>
+                        <th class="column TopLf">No.</th>
+                        <th class="column">Name</th>
+                        <th class="column">age</th>
+                        <th class="column">Gender</th>
+                        <th class="column TopRg">Service</th>
+                    </tr>
+                </thead>
                 <tbody id="tableBody"></tbody>
                 
             </table>

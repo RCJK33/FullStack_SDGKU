@@ -1,0 +1,44 @@
+.tab_pane{
+
+	display: block;
+	background-color: white;
+	text-align: left;
+	border-collapse: collapse;
+	width: 100%;
+	border-radius: 15px;
+
+}
+
+.table-rows{
+	padding: 16px;
+}
+
+.theader{
+	background-color: #000000;
+	border-bottom: solid 5px #000000;
+	color: white;
+}
+
+.TopLf{
+
+border-radius: 15px 0px 0px 0px;
+
+}
+
+.TopRg{
+
+border-radius: 0px 15px 0px 0px;
+
+}
+
+.BttmLf{
+
+border-radius: 0px 0px 15px 0px;
+
+}
+
+.esq4{
+
+border-radius: 0px 0px 0px 15px;
+
+}

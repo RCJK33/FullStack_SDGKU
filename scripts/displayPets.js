@@ -25,7 +25,7 @@ function displayPetCards() {
         rows += `
             <tr style="background-color:${color}">
                 
-                <td class="table-rows">${i+1}</td>
+                <td class="table-rows">${i+1}</td> 
                 <td class="table-rows">${array[i].name}</td>
                 <td class="table-rows">${array[i].age}</td>
                 <td class="table-rows">${array[i].gender}</td>
