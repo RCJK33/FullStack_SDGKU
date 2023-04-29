@@ -1,41 +1,44 @@
 function displayPetCards() {
-    let card = "";
-    let rows ="";
-    const div = document.getElementById('pets')
-    const divTR = document.getElementById('tableBody')
+    var cards = "";
+    var rows ="";
     // Travel the pets array
     for (let i = 0; i < array.length; i++) {
         // Create the template
         if (array[i].service == "grooming") {
-            color = "#8cc5fa"
+            color = "#93e1a0"
         }
         if (array[i].service == "vaccine") {
-            color = "#c75e51"
+            color = "#f0b0b0"
         }
         if (array[i].service == "nail") {
-            color = "#62df62"
+            color = "#d2b2f4"
         }
-        card += `
+        if (array[i].service == "shower") {
+            color = "#9ad4ea"
+        }
+        cards += `
         <div class="pet" style="background-color:${color}">
-            <h6>${array[i].name}</h6>
-            <p>${array[i].age}</p>
-            <p>${array[i].gender}</p>
-            <p>${array[i].service}</p>
+            <div class="card-name"><h6>${array[i].name}</h6></div>
+            <div class="card-info"><p>Age :${array[i].age}</p></div>
+            <div class="card-info"><p>Gender: ${array[i].gender}</p></div>
+            <div class="card-info"><p>Service: ${array[i].service}</p></div>       
+            <div class="btn-content-card"><button class="btn btn-card" type="button" onclick="deletePet(${i});">Delete</button></div>
         </div>`;
         rows += `
-            <tr style="background-color:${color}">
+            <tr class="tr" style="background-color:${color}">
                 
                 <td class="table-rows">${i+1}</td> 
                 <td class="table-rows">${array[i].name}</td>
                 <td class="table-rows">${array[i].age}</td>
                 <td class="table-rows">${array[i].gender}</td>
                 <td class="table-rows">${array[i].service}</td>
+                <td class="table-rows"><button class="btn btn-delete" type="button" onclick="deletePet(${i});">Delete</button></td>
                     
             </tr>
         `;
     }
     // Insert the template into the html
-    div.innerHTML = card;
+    div.innerHTML = cards;
     divTR.innerHTML = rows;
     updateCountPets();
 }
@@ -48,18 +51,5 @@ function updateCountPets() {
     </div>`;
     
     divC.innerHTML = countDiv;
+    clearInputs();
 }
-
-function displayTabla() {
-    
-}
-
-/* function displayPetNames() {
-    const divPets = document.querySelector("#pets")
-    for (let i = 0; i < array.length; i++) {
-        divPets.innerHTML += `
-            <p>${array[i].name}</p>
-        `;
-    }
-}
- */

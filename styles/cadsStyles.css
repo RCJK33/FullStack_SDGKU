@@ -1,0 +1,40 @@
+#pets{
+    display:  grid;
+    grid-template-columns: repeat(3,1fr);
+}
+
+.pet{
+    display: flex;
+    border-radius: 8px;
+    margin: 10px;
+    padding: 20px;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+.pet h6{
+    font-size: 16px;
+    padding: 5px;
+}
+.pet p{
+    font-size: 16px;
+}
+
+.card-info{
+    display: block;
+    padding: 5px;
+}
+
+.btn-content-card{
+    display: flex;
+    justify-content: right;
+    margin-top: 10px;
+}
+ 
+.btn-card{
+    background-color: red;
+}
+
+.btn-card:hover{
+    background-color: rgb(255, 59, 59);
+}

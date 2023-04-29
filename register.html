@@ -4,13 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/myStyles.css">
+    <link rel="stylesheet" href="styles/generalStyles.css">
+    <link rel="stylesheet" href="styles/navBar.css">
+    <link rel="stylesheet" href="styles/formStyles.css">
     <link rel="stylesheet" href="styles/tableStyles.css">
+    <link rel="stylesheet" href="styles/cadsStyles.css">
     <title>The Fashon Pet</title>
 </head>
 <body>
     <header>
-        <h1>The Fashon Pet</h1>
+        <div class="head-title"><h1>The Fashon Pet</h1></div>
         <nav class="menu">
             <a class="option" href="index.html">Home</a>
             <a class="option" href="about.html">About</a>
@@ -18,63 +21,74 @@
             <a class="option" href="register.html">Register</a>
         </nav>
     </header>
-    <main>
-    </main>
-        
-        <div>
-            <form action="URL">
-                <div>
-                    <label for="name">Name:</label>
-		            <input type="text" id="name">
-                </div>
-                
-		        <div>
-                    <label for="age">Age:</label>
-		            <input type="text" id="age">
-                </div>
-                
-                <div>
-                    <label for="gender">Gender:</label>
-		            <input type="text" id="gender">
-                </div>
-                
-		        <label for="txtService">Service:</label>
-		        <select id="txtService">
+
+    <div id="petCount" class="petCount"></div>
+    <div class="form-content">
+        <form action="">
+            
+            <div class="input-content">
+                <label for="name">Name:</label>
+                <input type="text" id="name">
+            </div>
+            
+            <div class="input-content">
+                <label for="age">Age:</label>
+                <input type="number" id="age">
+            </div>
+            
+            <div class="input-content">
+                <label for="gender">Gender:</label>
+                <input type="text" id="gender">
+            </div>
+            
+            <div class="input-content">
+                <label for="txtService">Service:</label>
+                <select id="txtService">
                     <option value="" disabled selected>--select an option</option>
                     <option value="grooming">grooming</option>
                     <option value="nail">nail triming</option>
                     <option value="vaccine">Vaccines</option>
                     <option value="shower">Shower</option>
                 </select>
-                <br><br>
-                <button type="button" onclick="getForm();">Entry</button>
-            </form>
-        </div>
+            </div>
+            <div class="btn-form-content">
+                <div id="alert"></div>
+                <button class="btn-form" type="button" onclick="getForm();">Entry</button>
+            </div>
+        </form>
+    </div>
 
-        <div id="petCount" class="petCount">
+    <div class="search-content">
+        <div class="input-content">
+            <label for="search" class="search-info"><h4>Search a pet</h4></label>
+            <input type="text" name="search" id="search-input" class="search-input" onkeyup="searchPet()">    
         </div>
+    </div>
 
-        <div class="table-content">
-            <table class="tab_pane" id="table">
-                <thead class="theader">
-                    <tr>
-                        <th class="column TopLf">No.</th>
-                        <th class="column">Name</th>
-                        <th class="column">age</th>
-                        <th class="column">Gender</th>
-                        <th class="column TopRg">Service</th>
-                    </tr>
-                </thead>
-                <tbody id="tableBody"></tbody>
-                
-            </table>
-        </div>
+    <div class="table-content">
+        <table class="table" id="table">
+            <thead class="theader">
+                <tr>
+                    <th class="column">No.</th>
+                    <th class="column">Name</th>
+                    <th class="column">age</th>
+                    <th class="column">Gender</th>
+                    <th class="column">Service</th>
+                    <th class="column"></th>
+                </tr>
+            </thead>
+            <tbody id="tableBody"></tbody>
+            
+        </table>
+    </div>
 
-        <div id="pets">
-        </div>
+    <div id="pets">
+    </div>
 
-    <script src="scripts/register.js"></script>
+    <script src="scripts/Pet.js"></script>
     <script src="scripts/displayPets.js"></script>
+    <script src="scripts/register.js"></script>
+    <script src="scripts/init.js"></script>
 
 </body>
 </html>`

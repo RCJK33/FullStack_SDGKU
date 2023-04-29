@@ -1,0 +1,53 @@
+form{
+    background-color: lightgray;
+    width: 40vh;
+    border-radius: 10px;
+    margin: 60px auto;
+    padding: 30px;
+}
+
+label{
+    width: 50px;
+    text-align: right;
+}
+
+.input-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    font-size: 15px;
+    flex-direction: row;
+}
+
+input, select{
+    display: block;
+    border: none;
+    border-radius: 7px;
+    flex-grow: 1;
+    padding: 5px;
+    margin: 0;
+    margin-left: 10px;
+}
+
+.btn-form-content{
+    display: flex;
+    justify-content: right;
+    flex-direction: row;
+}
+.btn-form{
+    margin: 10px;
+}
+.btn-form:hover{
+    background-color: rgb(24, 24, 24);
+
+}
+.btn-form:active{
+    background-color: rgb(43, 43, 43);
+
+}
+
+
+.error{
+    background-color: rgb(253, 192, 0192);
+}

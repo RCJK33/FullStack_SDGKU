@@ -1,44 +1,59 @@
-.tab_pane{
-
-	display: block;
-	background-color: white;
-	text-align: left;
-	border-collapse: collapse;
-	width: 100%;
-	border-radius: 15px;
-
+.table-content{
+	display: flex;
+	justify-content: center;
+	margin: 70px 0px;
 }
 
-.table-rows{
-	padding: 16px;
+table.table{
+	display: block;
+	border-collapse: collapse;
+	border: 0px;
+	padding: 10px;
 }
 
 .theader{
-	background-color: #000000;
-	border-bottom: solid 5px #000000;
+	background-color: black;
 	color: white;
+	font-size: 15px;
 }
 
-.TopLf{
-
-border-radius: 15px 0px 0px 0px;
-
+.column{
+	width: 100px;
+	padding: 10px;
+	border: 0px;
 }
 
-.TopRg{
-
-border-radius: 0px 15px 0px 0px;
-
+.table-rows{
+	padding: 10px;
+	text-align: center;
 }
 
-.BttmLf{
-
-border-radius: 0px 0px 15px 0px;
-
+.btn-delete{
+    background-color: red;
 }
 
-.esq4{
+.btn-delete:hover{
+    background-color: rgb(255, 59, 59);
+}
 
-border-radius: 0px 0px 0px 15px;
-
+/* search bar */
+.search-content{
+	display: block;
+	margin: 0 auto;
+	width: 700px;
+}
+.search-info{
+	display: inline;
+	text-align: center;
+	background-color: black;
+	color: white;
+	width: 100px;
+	padding: 8px 20px;
+	border-radius: 10px 0 0 10px;
+}
+.search-input{
+	background-color: rgb(236, 236, 236);
+	border-radius: 0 10px 10px 0;
+	padding: 9px 20px;
+	margin-left: 0;
 }
