@@ -19,7 +19,7 @@ function searchPet() {
     var rows = "";
     if (name != ""){
         for (let i = 0; i < array.length; i++) {
-            if (array[i].name.toLowerCase().includes(name.toLowerCase())) {
+            if (array[i].name.toLowerCase().includes(name.toLowerCase()) /* ||  array[i].service.toLowerCase().includes(service.toLowerCase()) */ ) {
                     // Create the template
                 if (array[i].service == "grooming") {
                     color = "#93e1a0"
