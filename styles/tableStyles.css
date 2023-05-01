@@ -1,7 +1,7 @@
 .table-content{
 	display: flex;
 	justify-content: center;
-	margin: 70px 0px;
+	margin: 20px 0px;
 }
 
 table.table{
@@ -40,7 +40,8 @@ table.table{
 .search-content{
 	display: block;
 	margin: 0 auto;
-	width: 700px;
+	margin-top: 100px;
+	width: fit-content;
 }
 .search-info{
 	display: inline;
@@ -52,8 +53,10 @@ table.table{
 	border-radius: 10px 0 0 10px;
 }
 .search-input{
+	display: inline;
 	background-color: rgb(236, 236, 236);
 	border-radius: 0 10px 10px 0;
 	padding: 9px 20px;
+	width: 20em;
 	margin-left: 0;
 }
